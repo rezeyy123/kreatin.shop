@@ -4,314 +4,76 @@
   <meta charset="UTF-8">
   <title>Checkout - Kreatin</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    .checkout-container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-    }
-
-    .checkout-product {
-      background: white;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    }
-
-    .checkout-product img {
-      width: 100%;
-      height: 300px;
-      object-fit: contain;
-      border-radius: 8px;
-      margin-bottom: 20px;
-    }
-
-    .checkout-product h2 {
-      font-size: 24px;
-      margin-bottom: 15px;
-      color: #111;
-    }
-
-    .price {
-      font-size: 28px;
-      font-weight: bold;
-      color: #e74c3c;
-      margin-bottom: 20px;
-    }
-
-    .quantity-selector {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
-    .quantity-selector label {
-      font-weight: 500;
-    }
-
-    .quantity-selector input {
-      width: 60px;
-      padding: 8px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      font-size: 16px;
-    }
-
-    .checkout-form {
-      background: white;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    }
-
-    .checkout-form h3 {
-      font-size: 20px;
-      margin-bottom: 20px;
-      color: #111;
-    }
-
-    .form-section {
-      margin-bottom: 25px;
-    }
-
-    .form-section h4 {
-      font-size: 16px;
-      font-weight: bold;
-      margin-bottom: 12px;
-      color: #333;
-    }
-
-    .form-group {
-      margin-bottom: 12px;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 500;
-      color: #555;
-    }
-
-    .form-group input,
-    .form-group select {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      font-size: 14px;
-      font-family: Arial, sans-serif;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    .form-row .form-group {
-      margin-bottom: 0;
-    }
-
-    .summary {
-      background: #f9f9f9;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-    }
-
-    .summary-row {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-      font-size: 14px;
-    }
-
-    .summary-row.total {
-      font-weight: bold;
-      font-size: 18px;
-      border-top: 2px solid #ddd;
-      padding-top: 10px;
-      margin-top: 10px;
-      color: #e74c3c;
-    }
-
-    .checkout-btn {
-      width: 100%;
-      padding: 14px;
-      background-color: #27ae60;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .checkout-btn:hover {
-      background-color: #229954;
-    }
-
-    .back-link {
-      margin-bottom: 20px;
-    }
-
-    .back-link a {
-      color: #3498db;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .back-link a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      .checkout-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
 <body>
-  <header class="Balken">
-    <img class="Bild1" src="https://cdn.refont.ai/refont/cdn/model/2025_12_15/3c62f8f0d6e764365f04a6ee6eb61559.jpg" alt="Logo">
+  <header class="Balken-checkout">
+    <img class="Bild1-checkout" src="https://cdn.refont.ai/refont/cdn/model/2025_12_15/3c62f8f0d6e764365f04a6ee6eb61559.jpg" alt="Logo">
     <h1 class="Kreatin">Kreatin</h1>
   </header>
 
-  <main>
-    <div class="checkout-container">
-      <!-- Produktanzeige -->
-      <div class="checkout-product">
-        <div class="back-link">
-          <a href="index.html">← Zurück zum Shop</a>
-        </div>
+  <main class="Ueberschriftmain">
+    <a href="index.html" class="back-link">← Zurück zum Shop</a>
+
+    <section class="checkout-grid">
+      <article class="Produkt">
         <img src="https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/nrx/nrx02992/y/8.jpg" alt="Kreatin Pulver">
         <h2>Kreatin Pulver Geschmackslos</h2>
         <div class="price">€24,99</div>
-        <p><strong>Beschreibung:</strong></p>
-        <p>Premium Kreatin Monohydrat Pulver - hochrein und geschmacksneutral. Ideal für alle, die ihre Trainingsleistung und Muskelaufbau unterstützen möchten.</p>
-        <p style="margin-top: 15px;"><strong>Vorteile:</strong></p>
-        <ul style="margin-left: 20px;">
+        <p><strong>Beschreibung:</strong><br>
+        Premium Kreatin Monohydrat Pulver - hochrein und geschmacksneutral. Ideal für alle, die ihre Trainingsleistung und Muskelaufbau unterstützen möchten.</p>
+        <p><strong>Vorteile:</strong></p>
+        <ul>
           <li>100% reines Kreatin Monohydrat</li>
           <li>Unterstützt Muskelkraft und Leistung</li>
           <li>Geschmacksneutral</li>
           <li>Einfach dosierbar</li>
           <li>300g pro Dose</li>
         </ul>
-      </div>
+      </article>
 
-      <!-- Checkout Formular -->
-      <div class="checkout-form">
-        <h3>Bestellung</h3>
+      <article class="Produkt">
+        <h2>Bestellung</h2>
 
-        <form>
-          <!-- Menge -->
-          <div class="form-section">
-            <h4>Menge</h4>
-            <div class="quantity-selector">
-              <label for="quantity">Anzahl:</label>
-              <input type="number" id="quantity" name="quantity" value="1" min="1" max="10">
-            </div>
-          </div>
+        <form onsubmit="submitOrder(event)">
+          <h3>Menge</h3>
+          <input type="number" id="quantity" value="1" min="1" max="10">
 
-          <!-- Persönliche Daten -->
-          <div class="form-section">
-            <h4>Persönliche Daten</h4>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="firstName">Vorname *</label>
-                <input type="text" id="firstName" name="firstName" required>
-              </div>
-              <div class="form-group">
-                <label for="lastName">Nachname *</label>
-                <input type="text" id="lastName" name="lastName" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="email">E-Mail *</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-              <label for="phone">Telefon</label>
-              <input type="tel" id="phone" name="phone">
-            </div>
-          </div>
+          <h3>Persönliche Daten</h3>
+          <input type="text" placeholder="Vorname" required>
+          <input type="text" placeholder="Nachname" required>
+          <input type="email" placeholder="E-Mail" required>
+          <input type="tel" placeholder="Telefon">
 
-          <!-- Adresse -->
-          <div class="form-section">
-            <h4>Lieferadresse</h4>
-            <div class="form-group">
-              <label for="street">Straße und Hausnummer *</label>
-              <input type="text" id="street" name="street" required>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="zipcode">Postleitzahl *</label>
-                <input type="text" id="zipcode" name="zipcode" required>
-              </div>
-              <div class="form-group">
-                <label for="city">Stadt *</label>
-                <input type="text" id="city" name="city" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="country">Land *</label>
-              <select id="country" name="country" required>
-                <option value="">-- Wählen Sie ein Land --</option>
-                <option value="de" selected>Deutschland</option>
-                <option value="at">Österreich</option>
-                <option value="ch">Schweiz</option>
-              </select>
-            </div>
-          </div>
+          <h3>Lieferadresse</h3>
+          <input type="text" placeholder="Straße und Hausnummer" required>
+          <input type="text" placeholder="Postleitzahl" required>
+          <input type="text" placeholder="Stadt" required>
+          <select required>
+            <option value="">Land wählen</option>
+            <option value="de" selected>Deutschland</option>
+            <option value="at">Österreich</option>
+            <option value="ch">Schweiz</option>
+          </select>
 
-          <!-- Zahlungsmethode -->
-          <div class="form-section">
-            <h4>Zahlungsmethode</h4>
-            <div class="form-group">
-              <select id="payment" name="payment" required>
-                <option value="">-- Zahlungsmethode wählen --</option>
-                <option value="cc">Kreditkarte</option>
-                <option value="paypal">PayPal</option>
-                <option value="sepa">SEPA Überweisung</option>
-                <option value="cod">Nachnahme</option>
-              </select>
-            </div>
-          </div>
+          <h3>Zahlungsmethode</h3>
+          <select required>
+            <option value="">Zahlungsmethode wählen</option>
+            <option value="cc">Kreditkarte</option>
+            <option value="paypal">PayPal</option>
+            <option value="sepa">SEPA Überweisung</option>
+            <option value="cod">Nachnahme</option>
+          </select>
 
-          <!-- Zusammenfassung -->
           <div class="summary">
-            <div class="summary-row">
-              <span>Produktpreis (1x):</span>
-              <span>€24,99</span>
-            </div>
-            <div class="summary-row">
-              <span>Versand:</span>
-              <span>€4,99</span>
-            </div>
-            <div class="summary-row total">
-              <span>Gesamtpreis:</span>
-              <span>€29,98</span>
-            </div>
+            <div>Produktpreis (1x): <span>€24,99</span></div>
+            <div>Versand: <span>€4,99</span></div>
+            <div class="total">Gesamtpreis: <span>€29,98</span></div>
           </div>
 
           <button type="submit" class="checkout-btn">Bestellung abschließen</button>
-          <p style="font-size: 12px; color: #999; text-align: center; margin-top: 15px;">
-            * Pflichtfelder
-          </p>
         </form>
-      </div>
-    </div>
+      </article>
+    </section>
   </main>
 
   <footer class="Impressum">
@@ -324,22 +86,10 @@
   </footer>
 
   <script>
-    // Quantity Änderung berechnet neuen Preis
-    document.getElementById('quantity').addEventListener('change', function() {
-      const quantity = parseInt(this.value) || 1;
-      const pricePerUnit = 24.99;
-      const shipping = 4.99;
-      const totalPrice = (pricePerUnit * quantity) + shipping;
-      
-      document.querySelector('.summary-row span:nth-child(2)').textContent = '€' + (pricePerUnit * quantity).toFixed(2);
-      document.querySelector('.summary-row.total span:nth-child(2)').textContent = '€' + totalPrice.toFixed(2);
-    });
-
-    // Formular Submission Handler
-    document.querySelector('form').addEventListener('submit', function(e) {
-      e.preventDefault();
+    function submitOrder(event) {
+      event.preventDefault();
       alert('Bestellung erfolgreich eingereicht! Vielen Dank.');
-    });
+    }
   </script>
 </body>
 </html>

@@ -147,3 +147,126 @@ background-size: cover;
   font-size: 14px;
   line-height: 1.5;
 }
+
+/* Checkout Styles */
+.Balken-checkout {
+  background: white;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.Bild1-checkout {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: 2px solid #111;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.back-link:hover {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: bold;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+.Produkt input,
+.Produkt select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+.Produkt h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px 0 12px 0;
+  color: #333;
+}
+
+.Produkt ul {
+  margin-left: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.Produkt ul li {
+  margin-bottom: 8px;
+}
+
+.summary {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.summary div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.summary .total {
+  font-weight: bold;
+  font-size: 18px;
+  border-top: 2px solid #ddd;
+  padding-top: 10px;
+  margin-top: 10px;
+  color: #111;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #111;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #333;
+}
+
+@media (max-width: 768px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+}
