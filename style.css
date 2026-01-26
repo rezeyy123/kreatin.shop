@@ -183,6 +183,10 @@ color: rgb(63, 56, 57);
   transition: max-height 0.3s ease;
 }
 
+.akkordion-content p {
+  color: black;
+}
+
 .akkordion-content.active {
   max-height: 500px;
 }
