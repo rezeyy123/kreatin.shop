@@ -45,7 +45,7 @@ color: rgb(63, 56, 57);
 
 .Ueberschrift2 {
   font-size: 32px;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   display: inline-block;
   padding: 10px 20px;
   background-color: rgb(255, 255, 255); 
@@ -58,7 +58,7 @@ color: rgb(63, 56, 57);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 50px;
-  margin-top: 100px;
+  margin-top: 550px;
 }
 
 .Produkt {
