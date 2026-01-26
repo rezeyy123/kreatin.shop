@@ -10,7 +10,8 @@ body {
   background-image: url("./415057ba-a13d-4391-b737-73d73fd9f402.png");
   color: #111;
 background-repeat: no-repeat;
-background-size: cover, 300px 300px; 
+background-size: cover, 
+background-size: auto;
 color: rgb(63, 56, 57);
   
 }
