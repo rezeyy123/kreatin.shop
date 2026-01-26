@@ -177,10 +177,6 @@ color: rgb(63, 56, 57);
   transform: scale(1.05);
 }
 
-.akkordion-button.active h2 {
-  color: rgb(248, 245, 83);
-}
-
 .akkordion-content {
   max-height: 0;
   overflow: hidden;
