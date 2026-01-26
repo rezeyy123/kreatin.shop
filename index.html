@@ -19,9 +19,13 @@
       <button>Suche</button>
     </div>
     <section class="Informationen">
-      <h2 class="Ueberschrift2">Informationen zu Kreatin</h2>
-      <p>Kreatin ist ein natürlich vorkommendes Molekül, das in kleinen Mengen in Fleisch und Fisch vorkommt. Es wird häufig als Nahrungsergänzungsmittel verwendet, um die Muskelkraft und Leistungsfähigkeit zu steigern. Studien zeigen, dass Kreatin besonders bei Kurzzeitbelastungen wie Sprinten oder Gewichtheben wirksam ist.</p>
-      <p>Die empfohlene Tagesdosis liegt meist bei 3–5 Gramm. Kreatin ist gut erforscht und gilt als sicher, solange die empfohlene Dosierung nicht überschritten wird. Eine ausreichende Flüssigkeitszufuhr ist während der Einnahme wichtig.</p>
+      <button class="akkordion-button">
+        <h2 class="Ueberschrift2"><span class="akkordion-arrow">▼</span> Informationen zu Kreatin</h2>
+      </button>
+      <div class="akkordion-content">
+        <p>Kreatin ist ein natürlich vorkommendes Molekül, das in kleinen Mengen in Fleisch und Fisch vorkommt. Es wird häufig als Nahrungsergänzungsmittel verwendet, um die Muskelkraft und Leistungsfähigkeit zu steigern. Studien zeigen, dass Kreatin besonders bei Kurzzeitbelastungen wie Sprinten oder Gewichtheben wirksam ist.</p>
+        <p>Die empfohlene Tagesdosis liegt meist bei 3–5 Gramm. Kreatin ist gut erforscht und gilt als sicher, solange die empfohlene Dosierung nicht überschritten wird. Eine ausreichende Flüssigkeitszufuhr ist während der Einnahme wichtig.</p>
+      </div>
     </section>
         <h2 class="Ueberschrift2">Produkte</h2>
 
@@ -77,5 +81,23 @@
       E-Mail: info@kreatin.de</p>
     </footer>
   </main>
+
+  <script>
+    document.querySelector('.akkordion-button').addEventListener('click', function() {
+      const content = document.querySelector('.akkordion-content');
+      const button = document.querySelector('.akkordion-button');
+      const section = document.querySelector('.Informationen');
+      
+      if (content.classList.contains('active')) {
+        content.classList.remove('active');
+        button.classList.remove('active');
+        section.classList.remove('active-accordion');
+      } else {
+        content.classList.add('active');
+        button.classList.add('active');
+        section.classList.add('active-accordion');
+      }
+    });
+  </script>
 </body>
 </html>
