@@ -82,6 +82,22 @@
     </footer>
   </main>
 
-
+  <script>
+    document.querySelector('.akkordion-button').addEventListener('click', function() {
+      const content = document.querySelector('.akkordion-content');
+      const button = document.querySelector('.akkordion-button');
+      const section = document.querySelector('.Informationen');
+      
+      if (content.classList.contains('active')) {
+        content.classList.remove('active');
+        button.classList.remove('active');
+        section.classList.remove('active-accordion');
+      } else {
+        content.classList.add('active');
+        button.classList.add('active');
+        section.classList.add('active-accordion');
+      }
+    });
+  </script>
 </body>
 </html>
