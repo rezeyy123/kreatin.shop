@@ -10,10 +10,7 @@ body {
   background-image: url("./vecteezy_blue-and-gold-wave-border-on-white-background_56791617.jpg");
   color: #111;
 background-repeat: no-repeat;
-background-size: cover;
-width: 300px;
-height: 300px;
-border: 2px solid;
+background-size: cover, 300px 300px; 
 color: pink;
   
 }
