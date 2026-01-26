@@ -58,7 +58,7 @@ color: rgb(63, 56, 57);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 50px;
-  margin-top: 550px;
+  margin-top: 400px;
 }
 
 .Produkt {
@@ -204,7 +204,7 @@ color: rgb(63, 56, 57);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 50px;
-  margin-top: 50px;
+  margin-top: 150px;
   margin-bottom: 50px;
 }
 
