@@ -119,14 +119,14 @@ color: rgb(63, 56, 57);
   border: none;
   border-radius: 8px;
   background-color: #fff566;
-  color: black;
+  color: rgb(0, 0, 0);
   cursor: pointer;
   font-size: 16px;
   transition: background 0.3s;
 }
 
 .Suchleiste button:hover {
-  background-color: #333;
+  background-color: #a4a700;
 }
 
 .Informationen {
