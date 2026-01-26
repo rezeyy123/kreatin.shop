@@ -11,6 +11,7 @@ body {
   color: #111;
 background-repeat: no-repeat;
 background-size: cover, 
+background-size: auto;
 background-size: 300px 100px;
 color: rgb(63, 56, 57);
   
