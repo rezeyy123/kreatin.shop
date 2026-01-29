@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fefefe;
+  background-image: url("./907fd7a5-cea8-46ac-9293-3e1bbf4050db.png");
+  color: #111;
+background-repeat: no-repeat;
+background-size: cover, 
+background-size: auto,
+background-size: 300px 100px;
+color: rgb(63, 56, 57);
+  
+}
+
+.Balken {
+  background: rgb(248, 245, 83);
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.Bild1 {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid #111; 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+
+.Ueberschriftmain {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.Ueberschrift2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(255, 255, 255); 
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+.Produkte {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  margin-top: 100px;
+}
+
+.Produkt {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.9s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.Produkt:hover {
+  transform: scale(1.05);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+}
+
+.Krea1,
+.Krea2 {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.Produkt:hover .Krea1,
+.Produkt:hover .Krea2 {
+  transform: scale(1.08);
+}
+
+.Produkt p {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.Suchleiste {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.Suche1{
+ text-color: black;
+}
+
+
+.Suchleiste input {
+  padding: 10px;
+  width: 300px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.Suchleiste button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #fff566;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.Suchleiste button:hover {
+  background-color: #a4a700;
+}
+
+.accordion-container {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.accordion {
+  background: rgb(255, 255, 255);
+  padding: 15px 20px;
+  border-radius: 16px;
+  margin: 20px 0;
+  box-shadow: 0 10px 25px rgba(10,10,10,0.3);
+  transition: padding 0.3s ease;
+}
+
+.accordion.Informationen {
+  margin: 20px auto;
+}
+
+.accordion.Informationen.active-accordion {
+  padding: 40px;
+}
+
+.accordion-header {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.accordion-header:hover {
+  transform: scale(1.02);
+}
+
+.accordion-header.active .akkordion-arrow {
+  transform: rotate(180deg);
+}
+
+.akkordion-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  font-size: 18px;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-content p {
+  color: black;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.Impressum {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.Impressum p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.Statements {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+
+.Statement {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.Statement:hover {
+  transform: scale(1.05);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+}
+
+.Statement-Bild {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.Statement:hover .Statement-Bild {
+  transform: scale(1.08);
+}
+
+.Statement-Text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  margin: 0;
+  flex-grow: 1;
+}
+
