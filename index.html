@@ -18,16 +18,29 @@
       <input type="text" placeholder="Produkt suchen...">
       <button>Suche</button>
     </div>
-    <section class="Informationen">
-      <button class="akkordion-button">
-        <h2 class="Ueberschrift2"><span class="akkordion-arrow">▼</span> Informationen zu Kreatin</h2>
-      </button>
-      <div class="akkordion-content">
-        <p>Kreatin ist ein natürlich vorkommendes Molekül, das in kleinen Mengen in Fleisch und Fisch vorkommt. Es wird häufig als Nahrungsergänzungsmittel verwendet, um die Muskelkraft und Leistungsfähigkeit zu steigern. Studien zeigen, dass Kreatin besonders bei Kurzzeitbelastungen wie Sprinten oder Gewichtheben wirksam ist.</p>
-        <p>Die empfohlene Tagesdosis liegt meist bei 3–5 Gramm. Kreatin ist gut erforscht und gilt als sicher, solange die empfohlene Dosierung nicht überschritten wird. Eine ausreichende Flüssigkeitszufuhr ist während der Einnahme wichtig.</p>
+    <div class="accordion-container">
+      <h2 class="Ueberschrift2" style="text-align: center; margin-bottom: 30px;">Informationen zu Kreatin</h2>
+
+      <div class="accordion Informationen">
+        <button class="accordion-header">
+          <span class="akkordion-arrow">▼</span> Eigenschaften
+        </button>
+        <div class="accordion-content">
+          <p>Kreatin ist ein natürlich vorkommendes Molekül, das in kleinen Mengen in Fleisch und Fisch vorkommt. Es wird häufig als Nahrungsergänzungsmittel verwendet, um die Muskelkraft und Leistungsfähigkeit zu steigern. Studien zeigen, dass Kreatin besonders bei Kurzzeitbelastungen wie Sprinten oder Gewichtheben wirksam ist.</p>
+        </div>
       </div>
-    </section>
-        <h2 class="Ueberschrift2">Statements zu Kreatin</h2>
+
+      <div class="accordion Informationen">
+        <button class="accordion-header">
+          <span class="akkordion-arrow">▼</span> Dosierung
+        </button>
+        <div class="accordion-content">
+          <p>Die empfohlene Tagesdosis liegt meist bei 3–5 Gramm. Kreatin ist gut erforscht und gilt als sicher, solange die empfohlene Dosierung nicht überschritten wird. Eine ausreichende Flüssigkeitszufuhr ist während der Einnahme wichtig.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="Ueberschrift2">Statements zu Kreatin</h2>
 
     <section class="Statements">
       <article class="Statement">
@@ -100,20 +113,22 @@ Ein simples Supplement mit starkem Effekt. <b><br>Kevin Levrone, IFBB Profi</br>
   </main>
 
   <script>
-    document.querySelector('.akkordion-button').addEventListener('click', function() {
-      const content = document.querySelector('.akkordion-content');
-      const button = document.querySelector('.akkordion-button');
-      const section = document.querySelector('.Informationen');
-      
-      if (content.classList.contains('active')) {
-        content.classList.remove('active');
-        button.classList.remove('active');
-        section.classList.remove('active-accordion');
-      } else {
-        content.classList.add('active');
-        button.classList.add('active');
-        section.classList.add('active-accordion');
-      }
+    const headers = document.querySelectorAll('.accordion-header');
+    headers.forEach(header => {
+        header.addEventListener('click', () => {
+            const active = document.querySelector('.accordion-header.active');
+            if (active && active !== header) {
+                active.classList.remove('active');
+                active.nextElementSibling.style.maxHeight = null;
+            }
+            header.classList.toggle('active');
+            const content = header.nextElementSibling;
+            if (header.classList.contains('active')) {
+                content.style.maxHeight = content.scrollHeight + "px";
+            } else {
+                content.style.maxHeight = null;
+            }
+        });
     });
   </script>
 </body>
