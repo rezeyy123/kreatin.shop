@@ -7,10 +7,10 @@
 body {
   font-family: Arial, sans-serif;
   background: #fefefe;
-  background-image: url("./93bf0ca0-1c00-487d-aa5d-c6d75d16ae2f-md.jpeg");
+  background-image: url("./e6edc7dc-af86-4876-9cfc-c6ffa27fd86d.png");
   color: #111;
 background-repeat: no-repeat;
-background-size: cover, 
+background-size: 1500px 1000px;
 color: rgb(63, 56, 57);
   
 }
@@ -233,8 +233,9 @@ color: rgb(63, 56, 57);
 }
 
 .Statement-Bild {
-  width: 100%;
-  height: 250px;
+  width: 50%;
+  height: 300px;
+  margin-left: 120px;
   object-fit: cover;
   border-radius: 12px;
   transition: transform 0.3s ease;
