@@ -131,5 +131,35 @@ Ein simples Supplement mit starkem Effekt. <b><br>Kevin Levrone, IFBB Profi</br>
         });
     });
   </script>
+</script>
+  <nav class="pagination" aria-label="Seitenwechsler">
+    <a href="#" class="page">1</a>
+    <a href="Protein%20shop/index2.html" class="page">2</a>
+    <a href="#" class="page">3</a>
+  </nav>
+  <script>
+    (function(){
+      const pagination = document.querySelector('.pagination');
+      if(!pagination) return;
+      let lastScroll = window.scrollY || 0;
+      let visible = false;
+      window.addEventListener('scroll', () => {
+        const current = window.scrollY || 0;
+        // only react after a small threshold to avoid flicker
+        if (current > lastScroll && current > 100) {
+          if(!visible){
+            pagination.classList.add('visible');
+            visible = true;
+          }
+        } else {
+          if(visible){
+            pagination.classList.remove('visible');
+            visible = false;
+          }
+        }
+        lastScroll = current;
+      }, {passive: true});
+    })();
+  </script>
 </body>
 </html>
