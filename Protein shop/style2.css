@@ -11,14 +11,12 @@ body {
   color: #111;
 background-repeat: no-repeat;
 background-size: cover, 
-background-size: auto,
-background-size: 300px 100px;
 color: rgb(63, 56, 57);
   
 }
 
 .Balken {
-  background: rgb(248, 245, 83);
+  background: rgb(230, 222, 181);
   height: 90px;
   display: flex;
   align-items: center;
@@ -118,7 +116,7 @@ color: rgb(63, 56, 57);
   padding: 10px 20px;
   border: none;
   border-radius: 8px;
-  background-color: #fff566;
+  background-color: rgb(230, 222, 181);
   color: rgb(0, 0, 0);
   cursor: pointer;
   font-size: 16px;
@@ -126,7 +124,7 @@ color: rgb(63, 56, 57);
 }
 
 .Suchleiste button:hover {
-  background-color: #a4a700;
+  background-color: rgb(146, 140, 107);
 }
 
 .accordion-container {
