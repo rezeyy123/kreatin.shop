@@ -129,5 +129,34 @@
         });
     });
   </script>
-</body>
-</html>
+    <nav class="pagination" aria-label="Seitenwechsler">
+      <a href="../index.html" class="page">1</a>
+      <a href="index2.html" class="page active">2</a>
+      <a href="#" class="page">3</a>
+    </nav>
+    <script>
+      (function(){
+        const pagination = document.querySelector('.pagination');
+        if(!pagination) return;
+        let lastScroll = window.scrollY || 0;
+        let visible = false;
+        window.addEventListener('scroll', () => {
+          const current = window.scrollY || 0;
+          if (current > lastScroll && current > 100) {
+            if(!visible){
+              pagination.classList.add('visible');
+              visible = true;
+            }
+          } else {
+            if(visible){
+              pagination.classList.remove('visible');
+              visible = false;
+            }
+          }
+          lastScroll = current;
+        }, {passive: true});
+      })();
+    </script>
+  </body>
+  </html>
+
